@@ -1,0 +1,32 @@
+.navbar {
+    padding: 15px;
+    /* background-color: cornflowerblue; */
+}
+
+.navbar_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: darkblue;
+    font-weight: bold;
+}
+
+    &.active {
+  
+        color: violet;
+        /* border-radius: 4px;
+        border: 1px solid darkblue; */
+    }
+
+    :hover,
+    :focus {
+       
+        color: violet;
+    }
+
+
+.nav_container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
