@@ -1,0 +1,6 @@
+.movies-list {
+    display: flex;
+    flex-direction: column;
+    list-style: inside;
+    margin-bottom: 12px;
+}

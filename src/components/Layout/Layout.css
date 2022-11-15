@@ -1,0 +1,43 @@
+
+.navbar {
+    display: grid;
+   
+    max-width: 960px;
+    margin: 10px auto;
+    padding: 0 15px;
+   
+}
+
+.navbar_row {
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: flex-start;
+    text-decoration: none;
+    color: darkblue;
+    font-weight: bold;
+    border-radius: 4px;
+
+ 
+}
+
+    /* &.active {
+  
+        color: rgb(32, 4, 32);
+        font-weight: 900;
+        /* border-radius: 4px;
+        border: 1px solid darkblue; 
+    } */
+
+    /* :hover,
+    :focus {
+       
+        color: rgb(215, 67, 215);
+        font-weight: bold;
+    } */
+
+
+.nav_container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}

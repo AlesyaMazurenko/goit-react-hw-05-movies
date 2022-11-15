@@ -1,8 +1,10 @@
 .App {
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: flex-start;
     font-size: 40;
     color: #010101;
+    margin: 0 25px;
 }

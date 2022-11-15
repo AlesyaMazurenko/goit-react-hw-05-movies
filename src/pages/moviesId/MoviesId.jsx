@@ -1,5 +1,5 @@
 import { NavLink, Outlet } from 'react-router-dom';
-import styles from './Movies.css'
+import './MoviesId.css';
 
 const navMovieItems = [
     { href: 'movieId', to:'/get-movie-details', text: 'Movie Details' },
@@ -7,25 +7,32 @@ const navMovieItems = [
     { href: 'reviews', to:'/get-movie-reviews', text: 'Reviews' }
 ]
 
-const getClassName = ({ isActive }) => {
-    return isActive ? `${styles.link} ${styles.isActive}` :
-        `${styles.link}`;  
-}
+// const getClassName = ({ isActive }) => {
+//     return isActive ? `${styles.link} ${styles.isActive}` :
+//         `${styles.link}`;  
+// }
 
-export default function Movies() {
+export default function MoviesId() {
     const elements = navMovieItems.map(({ href, to, text }) => {
          return (
           <li key = {href}>
-            <NavLink to={to} end>{text}</NavLink>
-          </li>
+            <NavLink to={href}>{text}</NavLink>
+             </li>
+             
         // <div>Movies Page</div>
     )   
     })
-
+    // console.log(elements);
     return (
-        <ul className={styles.menu}>
+        <main>
+        <div>
+        <ul className='menu'>
             {elements}
-        </ul>
+            </ul>
+            
+            </div>
+            <Outlet />
+        </main>
     )
 
 }

@@ -1,0 +1,14 @@
+.reviews-item {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.author {
+    font-weight: 600;
+    font-style: italic;
+}
+
+.line:not(:last-child) {
+    display: block;
+    border-top: solid 1px black;
+}
