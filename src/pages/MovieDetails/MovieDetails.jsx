@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";   
 import { getMovieById } from 'api/Api';
-import { useParams, useNavigate, Outlet } from 'react-router';
+import { useParams, Outlet } from 'react-router';
 import { NavLink } from "react-router-dom";
 import './MovieDetails.css';
 
@@ -30,6 +30,7 @@ export const MovieDetails = () => {
     console.log(movie);
     return (
         <main>
+            {error && <p>Sorry, movie is not found</p>}
             {movie &&
                 <div className="film-wrapper">
                     <img className="film-poster" src={`${IMAGE_URL}${movie.poster_path}`} alt="" />
@@ -39,14 +40,6 @@ export const MovieDetails = () => {
                         <p>Release date: <span className="film-description_span">{movie.release_date}</span></p>
                         <p>Rating: <span className="film-description_span">{ movie.vote_average}</span></p>
                     </div>
-                
-                    {/* Details of movie {movie.original_title}
-                     <p>{movie.original_title}</p>
-                        <p>Overview: <span>{movie.overview}</span></p>
-                        <p>Release date: <span className="film-description_span">{movie.release_date}</span></p>
-                        <p>Rating: <span className="film-description_span">{ movie.vote_average}</span></p>
-                
-                    console.log({movie}); */}
                 </div>}
             
             <div>

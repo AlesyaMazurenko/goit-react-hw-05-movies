@@ -1,6 +1,6 @@
 /// rfc
 // import React from 'react'
-import { Link, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import { AppBar } from 'components/AppBar/AppBar';
 import './Layout.css';
 
