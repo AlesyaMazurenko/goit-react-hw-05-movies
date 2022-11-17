@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect, useState } from "react";   
 import { getMovieById } from 'api/Api';
 import { useParams, Outlet } from 'react-router';
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import './MovieDetails.css';
 
 const MovieDetails = () => {
@@ -45,6 +45,7 @@ const MovieDetails = () => {
             <div>
                 <NavLink className={getActiveClass} to="cast">Cast</NavLink>
                 <NavLink className={getActiveClass} to="reviews">Reviews</NavLink>
+                <Link to="/" className="film-link">Go Back</Link>
             </div>
             <Suspense>
                 <Outlet />
