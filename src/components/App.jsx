@@ -1,7 +1,7 @@
 import './App.css';
 import { Routes, Route, Outlet } from 'react-router-dom';
 import { Layout } from '../components/Layout/Layout';
-import { lazy, Suspense } from 'react';
+import { lazy } from 'react';
 // import MoviesId from '../pages/moviesId/MoviesId';
 import HomePage from '../pages/HomePage/HomePage';
 import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
