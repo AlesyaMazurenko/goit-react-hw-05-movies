@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";   
+import React, { Suspense, useEffect, useState } from "react";   
 import { getMovieById } from 'api/Api';
 import { useParams, Outlet } from 'react-router';
 import { NavLink } from "react-router-dom";
 import './MovieDetails.css';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
     const {id} = useParams();
     const [movie, setMovie] = useState(null);
     const [error, setError] = useState(null);
@@ -46,8 +46,13 @@ export const MovieDetails = () => {
                 <NavLink className={getActiveClass} to="cast">Cast</NavLink>
                 <NavLink className={getActiveClass} to="reviews">Reviews</NavLink>
             </div>
-            <Outlet />
+            <Suspense>
+                <Outlet />
+            </Suspense>
+            
         </main>
        
     )
 };
+
+export default MovieDetails;
