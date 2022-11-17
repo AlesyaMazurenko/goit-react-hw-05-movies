@@ -1,7 +1,7 @@
 import './App.css';
 import { Routes, Route, Outlet } from 'react-router-dom';
 import { Layout } from '../components/Layout/Layout';
-import { lazy } from 'react';
+import { lazy, Suspense } from 'react';
 // import MoviesId from '../pages/moviesId/MoviesId';
 import HomePage from '../pages/HomePage/HomePage';
 import NotFoundPage from 'pages/NotFoundPage/NotFoundPage';
@@ -21,12 +21,14 @@ export const App = () => {
     <div className='App'>
         {/* <Suspense fallback={<div>Loading...</div>}> */}
       <Routes>
+        {/* <Suspense> */}
         <Route path="/" element={<Layout /> }> 
+        
           <Route index element={<HomePage />} />
    
           <Route path="movies" element={<Movie />} />
                {/* <Suspense> */}
-            <Route path="/movies/:id" element={<MovieDetails />} >
+            <Route path="movies/:id" element={<MovieDetails />} >
               {/* <Suspense> */}
                <Route path="cast" element={<Cast />} />
               
@@ -35,9 +37,10 @@ export const App = () => {
           </Route>
          {/* </Suspense>  */}
         </Route>
-       <Route path='*' element={<NotFoundPage />} />
+          <Route path='*' element={<NotFoundPage />} />
+           {/* </Suspense> */}
       </Routes>
-      {/* </Suspense> */}
+     
     <Outlet />
     </div> 
   )
