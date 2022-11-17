@@ -47,7 +47,7 @@ const MovieDetails = () => {
                 <NavLink className={getActiveClass} to="reviews">Reviews</NavLink>
                 <Link to="/" className="film-link">Go Back</Link>
             </div>
-            <Suspense>
+            <Suspense fallback={<div>Loading details...</div>}>
                 <Outlet />
             </Suspense>
             
